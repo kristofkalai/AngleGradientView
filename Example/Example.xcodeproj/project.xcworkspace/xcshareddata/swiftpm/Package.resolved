@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "anglegradientview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stateman92/AngleGradientView",
+      "state" : {
+        "revision" : "0ffe4e6a68f42cd8704a1912cbe8156f08767d92",
+        "version" : "0.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
