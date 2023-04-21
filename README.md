@@ -12,7 +12,7 @@ In this repository I wrote not just a simple approach to the latter one, but if 
 Add the following to `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/stateman92/VibrancyEffectView", exact: .init(0, 0, 1))
+.package(url: "https://github.com/stateman92/AngleGradientView", exact: .init(0, 0, 1))
 ```
 
 [Or add the package in Xcode.](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
