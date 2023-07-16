@@ -20,7 +20,7 @@ Add the following to `Package.swift`:
 ## Usage
 
 ```swift
-let gradientView = GradientView(colors: [.red, .blue, .black])
+let gradientView = AngleGradientView(colors: [.red, .blue, .black])
 gradientView.translatesAutoresizingMaskIntoConstraints = false
 view.addSubview(gradientView)
 gradientView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
