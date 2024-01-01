@@ -26,22 +26,23 @@ extension CAGradientLayer {
             colors = newValue?.map(\.cgColor)
         }
     }
+}
 
-    func apply(angle: CGFloat /* .zero means top to bottom gradient */, on layer: CAGradientLayer? = nil) {
+extension CAGradientLayer {
+    private func calculatePoints(degrees angle: CGFloat) -> (startPoint: CGPoint, endPoint: CGPoint) {
         let x = angle / 360
         let a = pow(sinf(Float(2 * .pi * ((x + 0.75) / 2))), 2)
         let b = pow(sinf(Float(2 * .pi * ((x + 0.00) / 2))), 2)
         let c = pow(sinf(Float(2 * .pi * ((x + 0.25) / 2))), 2)
         let d = pow(sinf(Float(2 * .pi * ((x + 0.50) / 2))), 2)
 
-        let endPoint = CGPoint(x: CGFloat(c), y: CGFloat(d))
-        let startPoint = CGPoint(x: CGFloat(a), y: CGFloat(b))
-        if let layer {
-            layer.endPoint = endPoint
-            layer.startPoint = startPoint
-        } else {
-            self.endPoint = endPoint
-            self.startPoint = startPoint
-        }
+        return (CGPoint(x: CGFloat(a), y: CGFloat(b)), CGPoint(x: CGFloat(c), y: CGFloat(d)))
+    }
+
+    func apply(degrees angle: CGFloat /* .zero means top to bottom gradient */, on layer: CAGradientLayer? = nil) {
+        let (startPoint, endPoint) = calculatePoints(degrees: angle)
+
+        (layer ?? self).endPoint = endPoint
+        (layer ?? self).startPoint = startPoint
     }
 }
