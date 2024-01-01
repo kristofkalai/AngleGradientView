@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
         gradient.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         gradient.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
-        gradient.angleDidUpdateHook = {
+        gradient.angleDidUpdate = {
             print($0.degrees)
         }
 

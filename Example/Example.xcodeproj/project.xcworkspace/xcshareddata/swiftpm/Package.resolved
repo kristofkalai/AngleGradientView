@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stateman92/AngleGradientView",
       "state" : {
-        "revision" : "0ffe4e6a68f42cd8704a1912cbe8156f08767d92",
-        "version" : "0.0.1"
+        "revision" : "0efaedfb5fb037dd242a5bc83cb6abe87ff8a38f",
+        "version" : "0.0.5"
       }
     }
   ],
